@@ -3,17 +3,11 @@
     xsi:noNamespaceSchemaLocation="urn:magento:framework:View/Layout/etc/page_configuration.xsd">
     <body>
         <referenceContainer name="after.body.start">
-            <block class="Magento\Framework\View\Element\Template"
+            <block class="HK2\ScrollTop\Block\ScrollTop"
                 name="hk2.scrolltop.button"
                 template="HK2_ScrollTop::scrolltop.phtml"
                 before="-" />
         </referenceContainer>
 
-        <referenceContainer name="before.body.end">
-            <block class="Magento\Framework\View\Element\Template"
-                name="hk2.scrolltop.js"
-                template="HK2_ScrollTop::js.phtml"
-                after="-" />
-        </referenceContainer>
     </body>
 </page>

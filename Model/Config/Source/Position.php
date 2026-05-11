@@ -1,4 +1,6 @@
 <?php
+declare(strict_types=1);
+
 namespace HK2\ScrollTop\Model\Config\Source;
 
 class Position implements \Magento\Framework\Option\ArrayInterface
