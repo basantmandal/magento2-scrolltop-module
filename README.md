@@ -1,163 +1,172 @@
-# HK2 Scroll Top
 
-HK2 Scroll Top adds an intuitive icon at the bottom-right corner of each page so that with one click you will be at the top of the page. No more dragging of the scroll bar. It will be just fun and ergonomic to use. Scroll Top is an uncomplicated free Open Source Magento Module allowing site visitors to immediately and seamlessly get back to the top of your web page after scrolling a lengthy page.
+<p align="center">
+<img src="https://img.shields.io/badge/version-1.0.0-blue?style=flat-square" alt="Version">
+<img src="https://img.shields.io/badge/Magento-2.4.x-f97316?style=flat-square&logo=magento&logoColor=white" alt="Magento">
+<img src="https://img.shields.io/badge/PHP-8.2%2B-7c3aed?style=flat-square&logo=php&logoColor=white" alt="PHP">
+<img src="https://img.shields.io/badge/license-OSL--3.0-green?style=flat-square" alt="License">
+<a href="https://packagist.org/packages/hk2/scrolltop"><img src="https://img.shields.io/packagist/dt/hk2/scrolltop?style=flat-square" alt="Packagist"></a>
+<br>
+<a href="https://www.basantmandal.in/"><img src="https://img.shields.io/badge/Website-000?style=flat-square&logo=ko-fi&logoColor=white" alt="Website"></a>
+<a href="https://www.linkedin.com/in/basantmandal/"><img src="https://img.shields.io/badge/LinkedIn-0A66C2?style=flat-square&logo=linkedin&logoColor=white" alt="LinkedIn"></a>
+<a href="mailto:support@basantmandal.in"><img src="https://img.shields.io/badge/Email-support%40basantmandal.in-blue?style=flat-square&logo=gmail" alt="Email"></a>
+</p>
 
-**Please Note**:- This Module Adds Scroll to Top Button in Magento Store Frontend. Scroll to Top Button Automatically gets activated when you scroll down.
+---
 
-## 💰 Account & Pricing
+## Overview
 
-This is a Open Source - Free to use Module. No charge or any fee is there to use it.
+**HK2_ScrollTop** is a lightweight, pure-frontend Magento 2 module that adds a smooth "back to top" button to your storefront. Visitors can return to the top of long pages with a single click — no dragging, no fuss. Built entirely with CSS and JavaScript, it has zero backend PHP class overhead.
 
-## 🧐 Features
+---
 
-1. No more dragging scroll bar.
-2. Available on all pages of Magento Frontend Store.
-3. Open Source - Free.
-4. It loads ScrollTop CSS & Js, Only If Enabled from Admin Backend.
+## Problem Statement
 
-## 🚀 Supported Version
+Long product pages, category listings, and CMS pages force users to manually scroll back to the top — or reach for the scrollbar — every time they want to access the main navigation, search bar, or header links. This friction degrades the user experience, especially on mobile devices where scrolling long distances is cumbersome.
 
-- Magento v2.3.5, 2.4.x
+---
 
-## How to install
+## Solution Approach
 
-### Method 1: Install ready-to-paste package
+HK2_ScrollTop injects a fixed-position button at the bottom-right corner of every page. After the user scrolls past 20px, the button fades in. Clicking it triggers a smooth jQuery animation that scrolls the viewport to the top. The module requires no PHP Blocks or Models — it uses only layout XML, a CSS file, and a JavaScript file, all gated behind a single admin configuration toggle.
 
-[Download Link - HK2 - ScrollTop - (https://github.com/basantmandal/HK2-ScrollTop-Magento-Module/releases)](https://github.com/basantmandal/HK2-ScrollTop-Magento-Module/releases)
+---
 
-Download the zip package and unzip it in app/code folder.
+## Who is this for?
 
-## Enable Extension:
+- Magento 2 store owners who want a simple, unobtrusive scroll-to-top button
+- Developers looking for a zero-configuration, no-PHP-backend module
+- Shops with long product descriptions, tall category pages, or extensive CMS content
 
-```bash
-php bin/magento module:enable HK2_ScrollTop
+---
+
+## Use Cases
+
+- **Long product pages** — After reading a detailed description, users can jump back to the Add to Cart button and header
+- **Extended category listings** — Infinite-scroll or paginated lists where the top navigation is far away
+- **CMS pages** — About Us, Terms & Conditions, FAQ, and blog posts benefit from quick top-of-page access
+- **Mobile storefronts** — Eliminates tedious thumb-scrolling on tall mobile layouts
+
+---
+
+## Key Features
+
+- **One-click scroll-to-top** — Smooth jQuery animation back to the page top
+- **Lightweight, no-PHP design** — Zero Block/Model classes; only CSS, JS, and layout XML
+- **Responsive fixed-position** — Stays at the bottom-right corner across all viewports
+- **Smooth animation** — Fade-in/fade-out based on scroll position, with animated scroll
+- **Configurable enable/disable** — Toggle on/off via admin configuration (enabled by default)
+
+---
+
+## Architecture Overview
+
+```
+Layout XML (default_head_blocks.xml)
+├── head.additional → header.phtml → scrollTop.css (injected into <head>)
+└── before.body.end → footer.phtml → button HTML + scrollTop.js (injected before </body>)
+
+Configuration
+└── Stores → Configuration → HK2 → ScrollTop_Configuration
+    └── Enable/Disable toggle (ifconfig gating both layout blocks)
 ```
 
-```bash
-php bin/magento setup:upgrade
-```
+The module has **no PHP Block or Model classes**. All frontend behaviour is driven by:
 
-```bash
-php bin/magento setup:static-content:deploy
-```
+- `view/frontend/layout/default_head_blocks.xml` — Layout handle with `ifconfig`-gated blocks
+- `view/frontend/templates/header.phtml` — CSS link injection
+- `view/frontend/templates/footer.phtml` — SVG button markup and JS script tag
+- `view/frontend/web/css/scrollTop.css` — Fixed-position styling (41x41px, dark background, yellow icon)
+- `view/frontend/web/js/scrollTop.js` — jQuery-based scroll detection and animation
 
-```bash
-php bin/magento cache:clean
-```
+---
 
-## Disable Extension:
+## System Requirements
 
-```bash
-php bin/magento module:disable HK2_ScrollTop
-```
+| Requirement | Version |
+|---|---|
+| Magento | Open Source 2.4.x / Commerce 2.4.x |
+| PHP | ^8.1 \|\| ^8.2 \|\| ^8.3 \|\| ^8.4 |
+| Composer | 2.x |
+| Dependencies | `hk2/core ^1.0`, `magento/framework ^103.0.0` |
 
-```bash
-php bin/magentosetup:upgrade
-```
+---
 
-```bash
-php bin/magento setup:static-content:deploy
-```
-
-```bash
-php bin/magento cache:clean
-```
-
-### Method 2: Install via composer (Recommend)
-
-Run the following command in Magento 2 root folder
+## Installation
 
 ```bash
 composer require hk2/scrolltop
-```
-
-````bash
+php bin/magento module:enable HK2_ScrollTop
 php bin/magento setup:upgrade
-
-```bash
-php bin/magento setup:static-content:deploy
-````
-
-## 🛠️ Maintenance mode
-
-You may want to enable the maintenance mode when installing or updating the module, especially when working on a production website. To do so, run the two commands below before and after running the other setup commands:
-
-### Enable Maintenance Mode
-
-```bash
-php bin/magento maintenance:enable
+php bin/magento cache:clean
 ```
 
-### Disable Maintenance Mode
+See [docs/installation.md](docs/installation.md) for detailed setup instructions.
 
-```bash
-php bin/magento maintenance:disable
-```
+---
 
-Feel Free to send your suggestions of any changes/improvements, will be happy to add the changes.
+## Configuration
 
-### Usage - How Does The Extension Work?
+1. Navigate to **Stores → Configuration → HK2 → ScrollTop_Configuration**
+2. Set **Enable ScrollTop** to **Yes** (default)
+3. Save configuration and clear the cache
 
-Once module is enabled you can see it on all pages. Please check the Screenshots
+Alternatively, use the menu shortcut at **Content → HK2 - Scroll Top**.
 
-![screenshot1](docs/images/Screenshot_01.png)
-![screenshot2](docs/images/Screenshot_02.png)
+The enable/disable toggle controls both the CSS and JS injection via the `ifconfig` attribute in the layout XML. When disabled, no markup, styles, or scripts are added to the page.
 
-## 🤫 Privacy
+---
 
-This extension does not read, change, store, or transmit any of your personal data (e.g., logins, passwords, messages, contacts) from any of the sites or your computer in absolutely any form.
+## Content Security Policy (CSP)
 
-## 📫 Support
+The module loads its CSS and JS from local Magento static files (`HK2_ScrollTop::css/scrollTop.css` and `HK2_ScrollTop::js/scrollTop.js`). No external resources, CDN scripts, or inline styles/scripts are injected, making the module fully CSP-compatible out of the box.
 
-For support or any bug report or changes mail me at - <support@hashtagkitto.co.in>
+No CSP whitelist entries are required.
 
-## 🐞 Bug Report
+---
 
-Please open an [issue](https://github.com/basantmandal/HK2-ScrollTop-Magento-Module/issues) on GitHub.
+## Privacy & GDPR
 
-When filing a bug remember that the better written the bug is, the more likely it is to be fixed.
+HK2_ScrollTop does **not**:
 
-You can also reach us at <support@hashtagkitto.co.in>
+- Collect, store, or transmit any personal data
+- Set cookies or use local/session storage
+- Track user behaviour or page views
+- Send data to any third-party service
 
-## 🍰 Contribution Guidelines 💖
+The module is fully GDPR-compliant. No consent notices or privacy policy updates are needed.
 
-Contributions are welcome! If you’d like to contribute to this project:
+---
 
-- Fork the repository.
-- Create a new branch (git checkout -b feature/your-feature-name).
-- Make your changes and commit them (git commit -am 'Add new feature').
-- Push to the branch (git push origin feature/your-feature-name).
-- Open a pull request.
+## Documentation
 
-**Please Note** :- I may be a bit delayed in responding or slow in responding due to low amount of free time. I apologize for the inconvenience and I appreciate your patience
+- [Installation Guide](docs/installation.md)
+- [Usage Guide](docs/usage.md)
+- [Compatibility Information](docs/compatibility.md)
+- [Changelog](CHANGELOG.md)
+- [Security Policy](SECURITY.md)
 
-## 🤝 Consent
+---
 
-By using any Product/Module/Application from Basant Mandal A.K.A (HK2 - Hash Tag Kitto), you hereby consent to our disclaimer and agree to its terms.
+## Known Limitations
 
-## 📢 Disclaimer
+- **No custom styling options in admin** — Button colours, size, and position cannot be changed via the admin panel; CSS overrides from a custom theme are required for visual customisation
+- **Always bottom-right** — The button is fixed to the bottom-right corner (right: 15px, bottom: 6px) and cannot be repositioned via configuration
+- **jQuery dependency** — Requires jQuery (bundled with Magento); not available as a vanilla JS implementation
 
-> **Basant Mandal (HK2 - Hash Tag Kitto)** does not make any warranties about the completeness, reliability and accuracy of this image or its related products. Any action you take upon the information you find here is strictly at your own risk.
+---
 
-> **Basant Mandal (HK2 - Hash Tag Kitto)** will not be liable for any losses and/or damages in connection with the use of our website.
+## Contributing
 
-## 💖Like my work? Help Us
+Contributions are welcome. Please open an issue or pull request on the [GitHub repository](https://github.com/anomalyco/opencode). For bug reports, use the provided issue template.
 
-Please rate my project or give some stars at [https://github.com/basantmandal/HK2-ScrollTop-Magento-Module](https://github.com/basantmandal/HK2-ScrollTop-Magento-Module). You can also contribute to make my Open Source Contribution more frequent and help others - [https://www.buymeacoffee.com/basantmandal](https://www.buymeacoffee.com/basantmandal) or [https://www.basantmandal.in/buymecoffee](https://www.basantmandal.in/buymecoffee)
+---
 
-## 📫 Feedback
+## License
 
-If you have any feedback, please reach out to us at <support@hashtagkitto.co.in>
+This software is licensed under the Open Software License (OSL 3.0). See [LICENCE.txt](LICENCE.txt) for the full license text.
 
-## 🔗 Links:
+---
 
-Feel free to reach me through the below handles if you'd like to contact me.
+## Disclaimer
 
-[![portfolio](https://img.shields.io/badge/my_portfolio-000?style=for-the-badge&logo=ko-fi&logoColor=white)](https://www.basantmandal.in/)
-[![linkedin](https://img.shields.io/badge/linkedin-0A66C2?style=for-the-badge&logo=linkedin&logoColor=white)](https://www.linkedin.com/in/basantmandal/)
-
-## 📜 License:
-
-[![MIT License](https://img.shields.io/badge/License-MIT-green.svg)](https://choosealicense.com/licenses/mit/)
-[![GPLv3 License](https://img.shields.io/badge/License-GPL%20v3-yellow.svg)](https://opensource.org/licenses/)
-[![AGPL License](https://img.shields.io/badge/license-AGPL-blue.svg)](http://www.gnu.org/licenses/agpl-3.0)
+THIS SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, AND NON-INFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES, OR OTHER LIABILITY.
