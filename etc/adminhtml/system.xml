@@ -1,28 +1,52 @@
+<?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
         xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Config:etc/system_file.xsd">
     <system>
-        <tab id="hk2_options_tab" sortOrder="3000">
-            <label>HK2</label>
-        </tab>
-        <section id="hk2_scrollTop_section1" showInDefault="1" showInWebsite="0" showInStore="0" sortOrder="2"
-                 translate="label">
-            <label><![CDATA[ScrollTop_Configuration]]></label>
+        <section id="hk2_scrollTop_section1" translate="label" sortOrder="2" showInDefault="1"
+                 showInWebsite="1" showInStore="1">
+            <label><![CDATA[Scroll Top]]></label>
             <tab>hk2_options_tab</tab>
             <resource>HK2_ScrollTop::core_config</resource>
 
-            <!-- Group 1 Settings -->
-            <group id="hk2_scrolltop_section1_group1" translate="label" type="text" sortOrder="250" showInDefault="1">
-                <label><![CDATA[ScrollTop_GeneralOptions]]></label>
-                <field id="hk2_scrolltop_enable" translate="label" type="select" sortOrder="1" showInDefault="1">
-                    <label><![CDATA[ScrollTop_Enable]]></label>
-                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
-                    <comment>
-                        <![CDATA[ScrollTop_Enable_Help_Message]]>
-                    </comment>
+            <group id="hk2_scrolltop_module_info" showInDefault="1" showInWebsite="0"
+                   showInStore="0" sortOrder="0" translate="label">
+                <label><![CDATA[About HK2 Extensions]]></label>
+                <field id="hk2_scrolltop_module_header" type="note" sortOrder="0" showInDefault="1"
+                       showInWebsite="0" showInStore="0">
+                    <frontend_model>HK2\Core\Block\Adminhtml\System\Config\ModuleHeader</frontend_model>
                 </field>
             </group>
 
+            <group id="hk2_scrolltop_section1_group1" translate="label" sortOrder="250"
+                   showInDefault="1" showInWebsite="1" showInStore="1">
+                <label><![CDATA[General Settings]]></label>
+                <field id="hk2_scrolltop_enable" translate="label" type="select" sortOrder="1"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label><![CDATA[Enable ScrollTop Button]]></label>
+                    <source_model>Magento\Config\Model\Config\Source\Yesno</source_model>
+                    <comment><![CDATA[Enable or disable the ScrollTop button on frontend]]></comment>
+                </field>
+                <field id="hk2_scrolltop_position" translate="label" type="select" sortOrder="2"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label><![CDATA[Button Position]]></label>
+                    <source_model>HK2\ScrollTop\Model\Config\Source\Position</source_model>
+                    <config_path>hk2_scrollTop_section1/hk2_scrolltop_section1_group1/hk2_scrolltop_position</config_path>
+                </field>
+                <field id="hk2_scrolltop_offset" translate="label" type="text" sortOrder="3"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label><![CDATA[Scroll Offset (px)]]></label>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                    <comment><![CDATA[Show button after scrolling this many pixels (default: 20)]]></comment>
+                    <config_path>hk2_scrollTop_section1/hk2_scrolltop_section1_group1/hk2_scrolltop_offset</config_path>
+                </field>
+                <field id="hk2_scrolltop_speed" translate="label" type="text" sortOrder="4"
+                       showInDefault="1" showInWebsite="1" showInStore="1">
+                    <label><![CDATA[Scroll Speed (ms)]]></label>
+                    <validate>validate-number validate-zero-or-greater</validate>
+                    <comment><![CDATA[Speed of scroll animation in milliseconds (default: 600)]]></comment>
+                    <config_path>hk2_scrollTop_section1/hk2_scrolltop_section1_group1/hk2_scrolltop_speed</config_path>
+                </field>
+            </group>
         </section>
     </system>
-</config> 
-
+</config>

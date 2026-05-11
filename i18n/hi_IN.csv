@@ -1,4 +1,5 @@
-"ScrollTop_Configuration", "Scroll Top",
-"ScrollTop_Enable", "मॉड्यूल सक्षम करें",
-"ScrollTop_Enable_Help_Message", "आपके Magento फ्रंटएंड में Scroll Top आइकन सक्षम करता है"
-"ScrollTop_GeneralOptions", "आम विकल्प"
+"HK2","HK2"
+"ScrollTop_Configuration","स्क्रॉलटॉप कॉन्फ़िगरेशन"
+"ScrollTop_GeneralOptions","सामान्य विकल्प"
+"ScrollTop_Enable","स्क्रॉलटॉप सक्षम करें"
+"ScrollTop_Enable_Help_Message","स्क्रॉल टू टॉप बटन दिखाने के लिए इस विकल्प को सक्षम करें।"

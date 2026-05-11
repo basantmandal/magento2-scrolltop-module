@@ -1,0 +1,9 @@
+<?php
+/** @var \HK2\ScrollTop\Helper\Data $helper */
+$helper = $this->helper('HK2\ScrollTop\Helper\Data');
+?>
+<?php if ($helper->isEnabled()): ?>
+    <div id="scrollTop_HK2" class="hk2-scrolltop" style="display: none;">
+        <span class="hk2-scrolltop-icon">↑</span>
+    </div>
+<?php endif; ?>
