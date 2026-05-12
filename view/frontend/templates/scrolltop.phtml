@@ -5,7 +5,7 @@
     <div id="scrollTop_HK2" 
          class="hk2-scrolltop" 
          style="display: none;"
-         data-mage-init='{"HK2_ScrollTop/js/scroll-top": <?= $block->getJsonConfig() ?>}'>
+         data-mage-init='{"HK2_ScrollTop/js/scroll-top": <?= $block->escapeHtmlAttr($block->getJsonConfig()) ?>}'>
         <span class="hk2-scrolltop-icon">↑</span>
     </div>
 <?php endif; ?>
