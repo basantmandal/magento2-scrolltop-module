@@ -4,6 +4,16 @@
 
 * refactor Data helper and add ScrollTop block with configuration options ([5dac9aa](https://github.com/basantmandal/magento2-scrolltop-module/commit/5dac9aa8b6e6dddb6fae4e3a88f7abcc0aab0c90))
 
+### 🐛 Bug Fixes
+
+* improve JSON configuration handling and enforce type declaration for ScopeConfigInterface ([b46fc83](https://github.com/basantmandal/magento2-scrolltop-module/commit/b46fc835420539dbfc0338a7ef3433ca46acfd3b))
+
+## [2.1.0](https://github.com/basantmandal/magento2-scrolltop-module/compare/2.0.0...2.1.0) (2026-05-12)
+
+### ✨ Features
+
+* refactor Data helper and add ScrollTop block with configuration options ([5dac9aa](https://github.com/basantmandal/magento2-scrolltop-module/commit/5dac9aa8b6e6dddb6fae4e3a88f7abcc0aab0c90))
+
 ## [2.0.0](https://github.com/basantmandal/magento2-scrolltop-module/compare/1.2.0...2.0.0) (2026-05-11)
 
 ### ⚠ BREAKING CHANGES
