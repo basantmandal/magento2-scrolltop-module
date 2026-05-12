@@ -9,6 +9,21 @@
 
 * escape HTML attributes in data-mage-init for scroll top configuration ([67ff7aa](https://github.com/basantmandal/magento2-scrolltop-module/commit/67ff7aa3e6ec7fc303071ec1c17cf49c9321ad7f))
 * improve JSON configuration handling and enforce type declaration for ScopeConfigInterface ([b46fc83](https://github.com/basantmandal/magento2-scrolltop-module/commit/b46fc835420539dbfc0338a7ef3433ca46acfd3b))
+* remove redundant tag sync step in release workflow ([d6f6fff](https://github.com/basantmandal/magento2-scrolltop-module/commit/d6f6fffb40564dbc36348cd5f05de8499ce6b076))
+* update release workflow to ignore specific paths and sync tags ([515b54c](https://github.com/basantmandal/magento2-scrolltop-module/commit/515b54cf5631e256cf6cf509a894f4549982a87f))
+* update resource reference for ScrollTop menu item in admin configuration ([905d010](https://github.com/basantmandal/magento2-scrolltop-module/commit/905d01003651852968232b6c7ef30bdcc50fd954))
+
+## [2.1.0](https://github.com/basantmandal/magento2-scrolltop-module/compare/2.0.0...2.1.0) (2026-05-12)
+
+### ✨ Features
+
+* refactor Data helper and add ScrollTop block with configuration options ([5dac9aa](https://github.com/basantmandal/magento2-scrolltop-module/commit/5dac9aa8b6e6dddb6fae4e3a88f7abcc0aab0c90))
+* trigger release ([7f491c0](https://github.com/basantmandal/magento2-scrolltop-module/commit/7f491c0b05bd9a905f01081ffb86dc8c147e2762))
+
+### 🐛 Bug Fixes
+
+* escape HTML attributes in data-mage-init for scroll top configuration ([67ff7aa](https://github.com/basantmandal/magento2-scrolltop-module/commit/67ff7aa3e6ec7fc303071ec1c17cf49c9321ad7f))
+* improve JSON configuration handling and enforce type declaration for ScopeConfigInterface ([b46fc83](https://github.com/basantmandal/magento2-scrolltop-module/commit/b46fc835420539dbfc0338a7ef3433ca46acfd3b))
 * update release workflow to ignore specific paths and sync tags ([515b54c](https://github.com/basantmandal/magento2-scrolltop-module/commit/515b54cf5631e256cf6cf509a894f4549982a87f))
 * update resource reference for ScrollTop menu item in admin configuration ([905d010](https://github.com/basantmandal/magento2-scrolltop-module/commit/905d01003651852968232b6c7ef30bdcc50fd954))
 
