@@ -15,7 +15,7 @@
 
 ## Overview
 
-**HK2_ScrollTop** is a lightweight, pure-frontend Magento 2 module that adds a smooth "back to top" button to your storefront. Visitors can return to the top of long pages with a single click — no dragging, no fuss. Built entirely with CSS and JavaScript, it has zero backend PHP class overhead.
+**HK2 ScrollTop** is a lightweight, pure-frontend Magento 2 module that adds a smooth "back to top" button to your storefront. Visitors can return to the top of long pages with a single click — no dragging, no fuss. Built entirely with CSS and JavaScript, it has zero backend PHP class overhead.
 
 ---
 
