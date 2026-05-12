@@ -64,10 +64,11 @@ class ScrollTop extends Template
      */
     public function getJsonConfig(): string
     {
-        return json_encode([
+        $config = json_encode([
             'scrollOffset' => $this->getScrollOffset(),
             'scrollSpeed' => $this->getScrollSpeed(),
             'position' => $this->getButtonPosition()
         ]);
+        return $config !== false ? $config : '{}';
     }
 }
