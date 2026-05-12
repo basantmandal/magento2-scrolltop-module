@@ -4,6 +4,6 @@
     <menu>
         <add id="HK2_ScrollTop::scrolltop" title="HK2 - Scroll Top" module="HK2_ScrollTop" sortOrder="43"
              action="adminhtml/system_config/edit/section/hk2_scrollTop_section1"
-             resource="Magento_Backend::content" parent="HK2::root"/>
+             resource="HK2_ScrollTop::core_config" parent="HK2::root"/>
     </menu>
 </config>
