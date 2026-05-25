@@ -10,6 +10,8 @@ phpcs.xml export-ignore
 /.releaserc.json export-ignore
 .gitignore export-ignore
 .gitattributes export-ignore
+dev/ export-ignore
+build/ export-ignore
 
 # Export all files with normalized line endings
 * text=auto

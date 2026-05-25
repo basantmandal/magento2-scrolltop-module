@@ -5,9 +5,9 @@ on:
     branches:
       - main
     paths-ignore:
-      - 'docs/**'
-      - '**/*.md'
-      - '.gitignore'
+      - "docs/**"
+      - "**/*.md"
+      - ".gitignore"
 
 permissions:
   contents: write

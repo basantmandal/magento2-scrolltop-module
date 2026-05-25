@@ -26,7 +26,6 @@ CodeSniffer.log
 ehthumbs.db
 Thumbs.db
 Desktop.ini
-*:Zone.Identifier
 
 # ============================================
 # IDE and Editor Files
@@ -105,7 +104,7 @@ tokens.json
 .php-cs-fixer.cache
 .phpstan/
 .psalm/
-infection.log
+infection.log 
 
 # ============================================
 # AI - Documentation

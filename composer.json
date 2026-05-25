@@ -3,6 +3,7 @@
     "description": "Scroll Top adds an intuitive icon at the bottom-right corner of each page so that with one click you will be at the top of the page. No more dragging of the scroll bar. It will be just fun and ergonomic to use. Scroll Top is an uncomplicated free Open Source Magento Module allowing site visitors to immediately and seamlessly get back to the top of your web page after scrolling a lengthy pages.",
     "type": "magento2-module",
     "license": "OSL-3.0",
+    "version": "2.0.0",
     "require": {
         "hk2/core": "^1.0",
         "magento/framework": "^103.0.0",
@@ -42,6 +43,7 @@
             "/.releaserc.json",
             "/build",
             "/composer.lock",
+            "/dev",
             "/node_modules",
             "/package-lock.json",
             "/package.json",
