@@ -1,11 +1,11 @@
-<?xml version="1.0" ?>
-<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
+<?xml version="1.0"?>
+<config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Store:etc/config.xsd">
     <default>
-        <hk2_scrollTop_section1>
-            <!-- Group 1 General Settings -->
-            <hk2scrolltop_section1_group1>
+        <hk2_scrolltop_section1>
+            <hk2_scrolltop_section1_group1>
                 <hk2_scrolltop_enable>1</hk2_scrolltop_enable>
-            </hk2scrolltop_section1_group1>
-        </hk2_scrollTop_section1>
+            </hk2_scrolltop_section1_group1>
+        </hk2_scrolltop_section1>
     </default>
 </config>

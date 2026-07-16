@@ -1,7 +1,9 @@
+<?xml version="1.0"?>
 <config xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-        xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
+    xsi:noNamespaceSchemaLocation="urn:magento:module:Magento_Backend:etc/menu.xsd">
     <menu>
-        <add id="HK2_ScrollTop::settings" title="HK2 - Scroll Top" module="HK2_ScrollTop" sortOrder="43"
-             action="adminhtml/system_config/edit/section/hk2_scrollTop_section1" resource="Magento_Backend::content"/>
+        <add id="HK2_ScrollTop::settings" title="Scroll Top" module="HK2_ScrollTop" sortOrder="43"
+            action="adminhtml/system_config/edit/section/hk2_scrolltop_section1"
+            resource="HK2_ScrollTop::core_config" parent="HK2::root" />
     </menu>
 </config>

@@ -1,12 +1,14 @@
 <?php
 
+declare(strict_types=1);
+
 /**
  * Basant Mandal (HK2 - HashTagKitto)
  *
  * NOTICE OF LICENSE
  *
  * This source file is subject to the Basant Mandal (HK2 - HashTagKitto) license that is
- * available in this module named LICENSE.txt 
+ * available in this module named LICENSE.txt
  * A copy of license is also avaialble at url - https://www.basantmandal.in/LICENSE.txt
  *
  * DISCLAIMER
@@ -18,7 +20,7 @@
  * @package     HK2_ScrollTop
  * @copyright   Copyright (c) Basant Mandal (HK2 - HashTagKitto) (https://www.basantmandal.in/) All rights reserved.
  * @license     https://www.basantmandal.in/LICENSE.txt
- * @license     LICENSE.txt - Availabe in this Module Root Folder
+ * @license     LICENSE.txt - Available in this Module Root Folder
  */
 
 use Magento\Framework\Component\ComponentRegistrar;

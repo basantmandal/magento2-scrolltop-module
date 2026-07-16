@@ -1,0 +1,15 @@
+<?php
+
+/** @var \HK2\ScrollTop\Block\ScrollTop $block */
+/** @var \Magento\Framework\Escaper $escaper */
+?>
+
+<?php if ($block->isEnabled()): ?>
+    <div id="scrollTop_HK2"
+         class="hk2-scrolltop"
+         style="display: none;"
+         data-mage-init='{"HK2_ScrollTop/js/scroll-top": <?= $escaper->escapeHtmlAttr($block->getJsonConfig()) ?>}'>
+        <span class="hk2-scrolltop-icon">↑</span>
+    </div>
+<?php endif; ?>
+
