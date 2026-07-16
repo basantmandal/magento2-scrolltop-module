@@ -1,6 +1,6 @@
 # HK2 Scroll Top
 
-![Version](https://img.shields.io/badge/version-3.0.0-blue?style=flat-square)
+![Version](https://img.shields.io/badge/version-2.1.0-blue?style=flat-square)
 ![License](https://img.shields.io/badge/license-OSL--3.0-green?style=flat-square)
 ![Magento](https://img.shields.io/badge/Magento-2.4.4--2.4.9-f97316?style=flat-square&logo=magento&logoColor=white)
 ![PHP](https://img.shields.io/badge/PHP-8.1%20%7C%7C%208.2%20%7C%7C%208.3%20%7C%7C%208.4-7c3aed?style=flat-square&logo=php&logoColor=white)
