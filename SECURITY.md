@@ -1,23 +1,44 @@
 # Security Policy
 
+## Supported Versions
+
+Only the latest release of HK2_ScrollTop receives security patches. Older versions are not maintained.
+
+| Version | Supported |
+|---|---|
+| 2.0.x (latest) | Supported |
+| < 2.0 | Not supported |
+
 ## Reporting a Vulnerability
 
-We take the security of HK2_ScrollTop and all related modules seriously. If you discover a security vulnerability, please **do not** open a public issue. Instead, send a detailed report to:
+We take the security of our software seriously. If you discover a security vulnerability in HK2_ScrollTop, please report it privately before disclosing it publicly.
 
-**support@basantmandal.in**
+**Do not** report security issues via public GitHub issues. Instead, send a detailed report to:
 
-We will acknowledge receipt within 48 hours and work with you to understand the scope and severity of the issue. Once confirmed, we will:
+**Email:** <support@basantmandal.in>
 
-1. Develop and test a fix
-2. Release a patched version
-3. Credit the reporter (if desired) in the release notes
+### What to include
 
-## Scope
+- A clear description of the vulnerability.
+- Steps to reproduce the issue (including Magento version, PHP version, and any relevant configuration).
+- Impact assessment (what an attacker could achieve).
+- Any suggested mitigation or fix, if known.
 
-This security policy applies to all versions of HK2_ScrollTop and its dependencies within the `hk2` namespace.
+### Response timeline
 
-## Best Practices
+- **Acknowledgement** -- We will acknowledge receipt of your report within 3 business days.
+- **Initial assessment** -- We will assess the vulnerability and determine its severity within 7 business days.
+- **Remediation** -- A fix will be developed and tested. The timeline depends on severity:
+  - Critical/high severity: patch release within 14 days.
+  - Medium/low severity: patch release within 30 days.
+- **Disclosure** -- Once a fix is released, we will publish a security advisory and credit the reporter (if desired).
 
-- Always run the latest version of the module
-- Apply Magento security patches promptly
-- Follow Magento's [security best practices](https://experienceleague.adobe.com/en/docs/commerce-operations/security-and-compliance/overview)
+### Responsible disclosure
+
+We ask that you:
+
+1. Allow us reasonable time to investigate and fix the issue before making any information public.
+2. Make every effort to avoid exploiting the vulnerability or causing harm.
+3. Do not access or modify user data without explicit permission.
+
+We are committed to working with security researchers and the community to keep our software safe.
